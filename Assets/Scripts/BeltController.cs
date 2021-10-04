@@ -7,6 +7,7 @@ public class BeltController : MonoBehaviour
 
     public float speed = 3.0f;
     public Transform TargetPosition;
+    public IEnumerator coroutine;
 
 
     private void OnTriggerEnter(Collider other)
@@ -23,5 +24,29 @@ public class BeltController : MonoBehaviour
     {
         Debug.Log("EXIT");
     }
+
+
+    public void MyClick()
+    {
+        // Start()
+        coroutine = Routine();
+        // Clinck()
+        StartCoroutine(coroutine);
+
+
+        StopCoroutine(coroutine);
+
+    }
+
+
+    public IEnumerator Routine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+
 
 }
