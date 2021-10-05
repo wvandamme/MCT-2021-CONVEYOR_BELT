@@ -351,7 +351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &283764794
 LightingSettings:
@@ -604,7 +604,7 @@ Transform:
   m_Children:
   - {fileID: 1725078064}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702249240
 GameObject:
@@ -884,6 +884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Package: {fileID: 8645516018987059186, guid: 525182e3e2675ff43ba87d95c6f8cd9c, type: 3}
   SpawnPoint: {fileID: 2024791073}
+  World: {fileID: 1948703376}
 --- !u!4 &932474404
 Transform:
   m_ObjectHideFlags: 0
@@ -1696,7 +1697,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1948703377}
     m_Modifications:
     - target: {fileID: 1568563553295356327, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
       propertyPath: m_Size.x
@@ -1744,7 +1745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661312008883691510, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2661312008883691510, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1752,7 +1753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661312008883691510, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2661312008883691510, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1773,6 +1774,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5052002340080182625, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
+--- !u!4 &1534716723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2661312008883691510, guid: 48e4bd076a6058d4dafad2170b4ffb69, type: 3}
+  m_PrefabInstance: {fileID: 1534716722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547824990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,19 +1945,19 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 932474402}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 932474403}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: EnableSpawningOfPackages
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1725078063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,6 +3601,7 @@ Transform:
   - {fileID: 1634204744}
   - {fileID: 1726876560}
   - {fileID: 2024791073}
+  - {fileID: 1534716723}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
