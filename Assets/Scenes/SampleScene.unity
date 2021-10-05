@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13548
+  m_Name: pb_Mesh-1382
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -884,7 +884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Package: {fileID: 8645516018987059186, guid: 525182e3e2675ff43ba87d95c6f8cd9c, type: 3}
   SpawnPoint: {fileID: 2024791073}
-  World: {fileID: 1948703376}
 --- !u!4 &932474404
 Transform:
   m_ObjectHideFlags: 0
@@ -982,7 +981,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13368
+  m_Name: pb_Mesh-1202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1321,9 +1320,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1887540759}
-        m_TargetAssemblyTypeName: BeltController, Assembly-CSharp
-        m_MethodName: MyClick
+      - m_Target: {fileID: 932474403}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: StartBelts
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3509,9 +3508,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1887540759}
-        m_TargetAssemblyTypeName: BeltController, Assembly-CSharp
-        m_MethodName: MyClick
+      - m_Target: {fileID: 932474403}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: StopBelts
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3559,17 +3558,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863367788}
   m_CullTransparentMesh: 1
---- !u!114 &1887540759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3299459438441644101, guid: 1524d0014a843474c8a7288dcee43952, type: 3}
-  m_PrefabInstance: {fileID: 5510817592691520477}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec74774811717144faff4da8165b45e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1948703376
 GameObject:
   m_ObjectHideFlags: 0
