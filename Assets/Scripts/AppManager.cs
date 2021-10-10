@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppManager : MonoBehaviour
 {
@@ -14,13 +15,23 @@ public class AppManager : MonoBehaviour
 
     public GameObject Package;
     public Transform SpawnPoint;
+    public Dropdown MaterialSelector;
     public PackageMaterial[] PackageMaterials;
-
+    
     IEnumerator PackageWorker = null;
 
-    void Start()
-    {
+    private void Start()
+    { 
         PackageWorker = PackageWorkerRoutine();
+        if (MaterialSelector)
+        {
+            MaterialSelector.options.Clear();
+            foreach (PackageMaterial m in PackageMaterials)
+            {
+                MaterialSelector.options.Add(new Dropdown.OptionData(m.name));
+            }
+            MaterialSelector.RefreshShownValue();
+        }
     }
 
     public void StartBelts()
@@ -56,8 +67,10 @@ public class AppManager : MonoBehaviour
     {
         while (true)
         {
+            GameObject obj = Instantiate(Package, SpawnPoint.position, Quaternion.identity);
+            MeshRenderer renderer = obj.GetComponent<MeshRenderer>();
+            renderer.material = PackageMaterials[MaterialSelector.value].material;
             yield return new WaitForSeconds(2);
-            Instantiate(Package, SpawnPoint.position, Quaternion.identity);
         }
     }
 

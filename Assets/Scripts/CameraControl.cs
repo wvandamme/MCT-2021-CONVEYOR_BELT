@@ -30,10 +30,11 @@ public class CameraControl : MonoBehaviour
         {
             transform.Translate(Vector3.right * keyboard_sensitivity * Time.deltaTime);
         }
-
-        xrot -= Input.GetAxis("Mouse Y") * mouse_sensitivity;
-        yrot += Input.GetAxis("Mouse X") * mouse_sensitivity;
-        transform.localRotation = Quaternion.Euler(xrot, yrot, 0.0f);
-
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        {
+            xrot -= Input.GetAxis("Mouse Y") * mouse_sensitivity;
+            yrot += Input.GetAxis("Mouse X") * mouse_sensitivity;
+            transform.localRotation = Quaternion.Euler(xrot, yrot, 0.0f);
+        }
     }
 }
