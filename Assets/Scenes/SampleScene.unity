@@ -553,7 +553,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 400}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &141233430
 MonoBehaviour:
@@ -1314,6 +1314,10 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: 6c755215cfc50404393f85980a6f0948, type: 2}
   - name: Red
     material: {fileID: 2100000, guid: 280d7b1e629b83d4eb3918d87a1991df, type: 2}
+  - name: Yellow
+    material: {fileID: 2100000, guid: 0181257e953b5f64590370f0aa3f359f, type: 2}
+  - name: Green
+    material: {fileID: 2100000, guid: 592986cc7a20af243865831fbfd91997, type: 2}
 --- !u!4 &932474404
 Transform:
   m_ObjectHideFlags: 0
