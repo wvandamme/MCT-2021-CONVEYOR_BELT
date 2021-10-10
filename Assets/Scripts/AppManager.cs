@@ -1,12 +1,20 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AppManager : MonoBehaviour
 {
+    [System.Serializable]
+    public class PackageMaterial
+    {
+        public string name;
+        public Material material;
+    }
 
     public GameObject Package;
     public Transform SpawnPoint;
+    public PackageMaterial[] PackageMaterials;
 
     IEnumerator PackageWorker = null;
 
