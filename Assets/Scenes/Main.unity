@@ -341,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ARCursorPrefab: {fileID: 5492844095245451910, guid: 81ad0fb710fd7c44bbfb4858730732a1, type: 3}
   WorldPrefab: {fileID: 4527897681108884524, guid: 7b2ab74a4f747ef428eedb2a1d12b2f6, type: 3}
+  WorldScale: 0.5
   MainCanvas: {fileID: 2067598908}
   Package: {fileID: 8645516018987059186, guid: 525182e3e2675ff43ba87d95c6f8cd9c, type: 3}
   SpawnPoint: {fileID: 0}

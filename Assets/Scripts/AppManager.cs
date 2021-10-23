@@ -17,6 +17,7 @@ public class AppManager : MonoBehaviour
 
     public GameObject ARCursorPrefab;
     public GameObject WorldPrefab;
+    public float WorldScale = 1.0f;
     public Canvas MainCanvas;
 
     private GameObject ARCursor;
@@ -84,6 +85,7 @@ public class AppManager : MonoBehaviour
             if (ARCursor.activeSelf)
             {
                 World = Instantiate(WorldPrefab, ARCursor.transform.position, ARCursor.transform.rotation);
+                World.transform.localScale *= WorldScale;
                 MainCanvas.gameObject.SetActive(true);
             }
         }
