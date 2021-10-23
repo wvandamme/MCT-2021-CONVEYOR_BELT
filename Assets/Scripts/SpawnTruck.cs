@@ -40,7 +40,8 @@ public class SpawnTruck : MonoBehaviour
     public void Spawn()
     {
         Truck = Instantiate(TruckPrefab, transform.position, transform.rotation);
-        Truck.transform.localScale = Vector3.Scale(new Vector3(4, 4, 4), transform.lossyScale);
+        Truck.transform.parent = transform;
+        Truck.transform.localScale = new Vector3(4, 4, 4);
         Truck.GetComponent<TruckController>().parent = this;
     }
 
