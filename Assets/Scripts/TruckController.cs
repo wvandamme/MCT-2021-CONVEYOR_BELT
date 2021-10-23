@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TruckController : MonoBehaviour
 {
-    public float speed = 2.0f;
+    public float speed;
 
     private int counter;
 
