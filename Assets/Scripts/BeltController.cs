@@ -7,24 +7,14 @@ public class BeltController : MonoBehaviour
 
     public float speed = 3.0f;
     public Transform TargetPosition;
-    public bool isOn;
 
     private void OnTriggerStay(Collider other)
     {
-        if (isOn)
+        if (other.GetComponent<PackageController>())
         {
-            other.transform.position = Vector3.MoveTowards(other.transform.position, TargetPosition.position, speed * Time.deltaTime);
+           float scaled_speed = System.Math.Abs(Vector3.Dot((other.transform.position - TargetPosition.position).normalized, other.transform.lossyScale));
+           other.transform.position = Vector3.MoveTowards(other.transform.position, TargetPosition.position, speed * Time.deltaTime * scaled_speed);
         }
-    }
-
-    public void StartOperation()
-    {
-        isOn = true;
-    }
-
-    public void StopOperation()
-    {
-        isOn = false;
     }
 
 }

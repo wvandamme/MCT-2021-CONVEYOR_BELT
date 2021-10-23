@@ -15,18 +15,24 @@ public class TruckController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        counter++;
-        other.transform.SetParent(transform);
-        if (counter >= 5)
+        if (other.GetComponent<PackageController>())
         {
-            StartCoroutine(Driving());
+            counter++;
+            other.transform.SetParent(transform);
+            if (counter >= 5)
+            {
+                StartCoroutine(Driving());
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        --counter;
-        other.transform.SetParent(null);
+        if (other.GetComponent<PackageController>())
+        {
+            --counter;
+            other.transform.SetParent(null);
+        }
     }
 
     private IEnumerator Driving()

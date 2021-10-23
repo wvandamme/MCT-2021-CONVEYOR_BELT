@@ -343,18 +343,6 @@ MonoBehaviour:
   WorldPrefab: {fileID: 4527897681108884524, guid: 7b2ab74a4f747ef428eedb2a1d12b2f6, type: 3}
   WorldScale: 0.5
   MainCanvas: {fileID: 2067598908}
-  Package: {fileID: 8645516018987059186, guid: 525182e3e2675ff43ba87d95c6f8cd9c, type: 3}
-  SpawnPoint: {fileID: 0}
-  MaterialSelector: {fileID: 0}
-  PackageMaterials:
-  - name: Blue
-    material: {fileID: 2100000, guid: 6c755215cfc50404393f85980a6f0948, type: 2}
-  - name: Red
-    material: {fileID: 2100000, guid: 280d7b1e629b83d4eb3918d87a1991df, type: 2}
-  - name: Yellow
-    material: {fileID: 2100000, guid: 0181257e953b5f64590370f0aa3f359f, type: 2}
-  - name: Green
-    material: {fileID: 2100000, guid: 592986cc7a20af243865831fbfd91997, type: 2}
 --- !u!4 &932474404
 Transform:
   m_ObjectHideFlags: 0
@@ -750,6 +738,8 @@ GameObject:
   - component: {fileID: 1821635991}
   - component: {fileID: 1821635995}
   - component: {fileID: 1821635996}
+  - component: {fileID: 1821635997}
+  - component: {fileID: 1821635998}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: Untagged
@@ -884,6 +874,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   app: {fileID: 932474403}
   raycast_manager: {fileID: 1195577390}
+--- !u!136 &1821635997
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821635989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1821635998
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821635989}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2067598905
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2067598906
 MonoBehaviour:
   m_ObjectHideFlags: 0
