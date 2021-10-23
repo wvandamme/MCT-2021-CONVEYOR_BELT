@@ -5,6 +5,7 @@ using UnityEngine;
 public class TruckController : MonoBehaviour
 {
     public float speed;
+    public SpawnTruck parent;
 
     private int counter;
 
@@ -37,6 +38,7 @@ public class TruckController : MonoBehaviour
 
     private IEnumerator Driving()
     {
+        parent.RequestNew();
         GameObject.Destroy(gameObject, 8.0f);
         while (true) 
         {
