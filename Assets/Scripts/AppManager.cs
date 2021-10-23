@@ -6,6 +6,73 @@ using UnityEngine.UI;
 
 public class AppManager : MonoBehaviour
 {
+
+    [System.Serializable]
+    public struct ImagePrefab
+    {
+        public string name;
+        public GameObject prefab;
+    }
+
+    public GameObject ARCursorPrefab;
+
+    private GameObject ARCursor;
+
+    public void OnEnable()
+    {
+        ARCursor = Instantiate(ARCursorPrefab, transform);
+        ARCursor.SetActive(false);
+    }
+
+    public void OnDisable()
+    {
+        Object.Destroy(ARCursor);
+    }
+
+    public void EnableARCursor(Vector3 position, Quaternion rotation)
+    {
+        ARCursor.SetActive(true);
+        ARCursor.transform.position = position;
+        ARCursor.transform.rotation = rotation;
+    }
+
+    public void DisableARCursor()
+    {
+        ARCursor.SetActive(false);
+    }
+
+    public bool RunsInSimulator()
+    {
+#if UNITY_EDITOR
+        return true;
+#else
+        return false;
+#endif
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     [System.Serializable]
     public class PackageMaterial
     {
@@ -73,5 +140,9 @@ public class AppManager : MonoBehaviour
             yield return new WaitForSeconds(2);
         }
     }
+
+
+
+
 
 }
