@@ -6,35 +6,17 @@ public class SpawnTruck : MonoBehaviour
 {
 
     public GameObject TruckPrefab;
-    public Canvas Gui;
 
     private GameObject Truck = null;
 
     private void Start()
     {
         Spawn();
-        Gui.gameObject.SetActive(false);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.GetComponent<Camera>())
-        {
-            Gui.gameObject.SetActive(Truck == null);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<Camera>())
-        {
-            Gui.gameObject.SetActive(false);
-        }
     }
 
     public void RequestNew()
     {
-        Truck = null;
+        StartCoroutine(SpanwAfter(2.0f));
     }
 
     public void Spawn()
@@ -43,6 +25,12 @@ public class SpawnTruck : MonoBehaviour
         Truck.transform.parent = transform;
         Truck.transform.localScale = new Vector3(4, 4, 4);
         Truck.GetComponent<TruckController>().parent = this;
+    }
+
+    IEnumerator SpanwAfter(float seconds_)
+    {
+        yield return new WaitForSeconds(seconds_);
+        Spawn();
     }
 
 }
